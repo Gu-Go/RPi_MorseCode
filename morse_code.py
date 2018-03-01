@@ -26,20 +26,20 @@ CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
 
 def led1():
 	GPIO.output(l1p,GPIO.HIGH)
-	time.sleep(1)
+	time.sleep(3)
 	GPIO.output(l1p,GPIO.LOW)	
 	time.sleep(.5)
 	print("LED1")
 
 def led2():
 	GPIO.output(l2p,GPIO.HIGH)
-	time.sleep(1)
+	time.sleep(3)
 	GPIO.output(l2p,GPIO.LOW)	
 	print("LED2")
 	time.sleep(.5)
 
-	
-TEXT = "ANIKET"
+time.sleep(3)
+TEXT = "lingli".upper()
 
 for character in list(TEXT):
 	for element in CODE[character]:
@@ -48,4 +48,4 @@ for character in list(TEXT):
 			led1()
 		elif element == '-':
 			led2()
-	time.sleep(2)
+	time.sleep(8)
